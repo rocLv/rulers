@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "mini rails"
   spec.description   = "mini rails"
-  spec.homepage      = "github.com/roclv"
+  spec.homepage      = "http://github.com/roclv"
   spec.required_ruby_version = ">= 2.4.0"
 
   spec.metadata["allowed_push_host"] = ""
