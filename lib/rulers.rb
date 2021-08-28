@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "rulers/version"
-require_relative "routing"
+require_relative "rulers/routing"
 
 module Rulers
   class Application
@@ -16,7 +16,7 @@ module Rulers
   end
 
   class Controller
-    def initilize(env)
+    def initialize(env)
       @env = env
     end
 
