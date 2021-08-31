@@ -1,0 +1,29 @@
+PATH
+  remote: .
+  specs:
+    rulers (0.3.5)
+      erubis
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    erubis (2.7.0)
+    power_assert (2.0.1)
+    rack (2.2.3)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
+    rake (13.0.6)
+    test-unit (3.4.4)
+      power_assert
+
+PLATFORMS
+  x86_64-darwin-20
+
+DEPENDENCIES
+  rack-test
+  rake (~> 13.0)
+  rulers!
+  test-unit (~> 3.0)
+
+BUNDLED WITH
+   2.2.26
