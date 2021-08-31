@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   spec.add_dependency "erubis"
+  spec.add_dependency "multi_json"
   spec.add_development_dependency "rack-test"
 
   # For more information and examples about making a new gem, checkout our
