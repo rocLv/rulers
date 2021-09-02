@@ -28,6 +28,14 @@ module Rulers
       eruby = Erubis::Eruby.new(template)
       eruby.result locals.merge(:env => env)
     end
+
+    def request
+      @request ||= Rack::Requet.new(@env)
+    end
+
+    def params
+      request.params
+    end
   end
 
 end
