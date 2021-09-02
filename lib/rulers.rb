@@ -20,8 +20,9 @@ module Rulers
       text = controller.send(action)
       if controller.get_response
         status, headers, rs = controller.get_response.to_a
+        puts rs.inspect
         [status, headers, [rs.body].flatten]
-      else
+      else
         [200, {'Content-Type' => 'text/html'}, [text]]
       end
     end
