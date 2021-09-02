@@ -30,12 +30,29 @@ module Rulers
     end
 
     def request
-      @request ||= Rack::Requet.new(@env)
+      @request ||= Rack::Request.new(@env)
     end
 
     def params
       request.params
     end
+
+    def response(text, status = 200, headers = {})
+      raise "Already responded!" if @response
+      a = [text].flatten
+      @response =
+        Rack::Response.new(a, status, headers)
+
+    end
+
+    def get_response
+      @response
+    end
+
+    def render_response(*args)
+      response(render(*args))
+    end
+
   end
 
 end
