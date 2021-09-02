@@ -19,8 +19,8 @@ module Rulers
       controller = klass.new(env)
       text = controller.send(action)
       if controller.get_response
+        byebug
         status, headers, rs = controller.get_response.to_a
-        puts rs.inspect
         [status, headers, [rs.body].flatten]
       else
         [200, {'Content-Type' => 'text/html'}, [text]]
